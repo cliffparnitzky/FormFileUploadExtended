@@ -89,7 +89,7 @@ class FormFileUploadExtended extends Controller {
 		if ($objWidget instanceof FormFileUpload) {
 			$arrFileData = $_SESSION['FILES'][$objWidget->name];
 			$arrFileData['tmp_name'] = str_replace(TL_ROOT . '/', '', $arrFileData['tmp_name']);
-			$_SESSION['FILE_UPLOAD'][$objWidget->name]) = $arrFileData;
+			$_SESSION['FILE_UPLOAD'][$objWidget->name] = $arrFileData;
 		}
 		return $objWidget;
 	}
